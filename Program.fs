@@ -34,7 +34,6 @@ let countSentences (text: string) =
     let sentencePattern = @"[.!?]"
     Regex.Matches(text, sentencePattern).Count
 
-// Function to count paragraphs
 let countParagraphs (text: string) =
     text.Split([|'\n'|], StringSplitOptions.RemoveEmptyEntries) |> Array.length
 
@@ -94,5 +93,5 @@ let main () =
         else
             printfn "Error: Could not load the file."
 
-// Start the program
+
 main ()
